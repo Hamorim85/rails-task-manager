@@ -1,0 +1,14 @@
+
+<div class="row">
+  <div  class="col-3 offset-6">
+    <h1> My Tasks </h1>
+    <ul class="list-group">
+    <% @tasks.each do |task| %>
+      <li class="list-group-item"><input id="checkBox" type="checkbox" <%= task.completed == true ? "checked" : "" %> disabled>
+        <%= link_to task.title,  task_path(task) %></li>
+    <% end %>
+    </ul>
+    <%= link_to "Add New Task", "tasks/new", {:class => "btn btn-primary"} %>
+  </div>
+</div>
+

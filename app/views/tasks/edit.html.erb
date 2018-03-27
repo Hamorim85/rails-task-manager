@@ -1,0 +1,15 @@
+
+<div class="row">
+  <div  class="col-3 offset-6">
+    <div class="form-group">
+      <%= form_for @task do |f| %>
+        <%= f.label :title, "Enter a task title" %>
+        <%= f.text_field :title %>
+        <%= f.label :details, "Enter Details" %>
+        <%= f.text_area :details %>
+        <%= f.submit  "Save Edit"%>
+      <% end %>
+    </div>
+  </div>
+</div>
+
